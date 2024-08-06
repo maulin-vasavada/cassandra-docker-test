@@ -20,7 +20,3 @@ echo "Running the container..."
 # we do docker exec -it we will get logged in as cassandra which will make it easy
 # for accessing /etc/cassandra files since its created with cassandra:cassandra access
 docker run --user cassandra --rm -p 7199:7199 -e "JMX_HOST=localhost" $image_tag
-
-# in jConsole use the below url as remote service and use cassandra/cassandra username/password
-# for the auth
-# service:jmx:rmi://localhost/jndi/rmi://localhost:7199/jmxrmi
